@@ -107,7 +107,7 @@ func checkNetworkState() {
 	if newState != networkState {
 		fmt.Println("network state changed")
 		// restart MDNS
-		startMDNS()
+		_ = startMDNS()
 		networkState = newState
 		requestDisplayUpdate()
 	}
